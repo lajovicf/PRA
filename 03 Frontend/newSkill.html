@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work APP | Vnos nove spretnosti</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="js/postSkill.js"></script>
+	  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <link href="css/workapp.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+       <!-- navbar -->
+		<nav class="navbar navbar-expand-lg navbar-light">
+   &nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html"><b>Vodenje delovnih opravil, zaposlenih in projektov</b></a>
+  </nav>
+		<!-- !navbar -->
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+				<ul><b>Seznami:</b>
+                  <li><a class="nav-link" href="index.html">Seznam delovnih opravil</a></li>
+				  <li><a class="nav-link" href="listEmployees.html">Seznam zaposlenih</a></li>
+				  <li><a class="nav-link" href="listProjects.html">Seznam projektov</a></li>
+				  <li><a class="nav-link" href="listSkills.html">Seznam spretnosti</a></li>
+				  <br><b>Ustvari novo:</b>
+				  <li><a class="nav-link" href="newTask.html">Ustvari novo delovno opravilo</a></li>
+				  <li><a class="nav-link" href="newEmployee.html">Ustvari novega zaposlenega</a></li>
+				  <li><a class="nav-link" href="newProject.html">Ustvari nov projekt</a></li>
+				  <li><a class="nav-link" href="newSkill.html">Ustvari novo spretnost</a></li>
+            </ul>
+            </div>  
+            <div class="col-9" id="app">
+                
+              <h3>Vnos nove spretnosti</h3>
+                <form>
+                    <div class="mb-3">
+                      <label  class="form-label">Id spretnosti</label>
+                      <input v-model="skill.idSkill" type="text" class="form-control" id="idSkill" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Ime spretnosti</label>
+                        <input v-model="skill.nameSkill" type="text" class="form-control" id="nameSkill" aria-describedby="emailHelp">
+                    
+                      </div>
+                      <div class="mb-3">
+                        <label  class="form-label">Opis spretnosti</label>
+                        <input type="text" v-model="skill.descSkill"  class="form-control" id="descSkill" >
+                    
+                      </div>
+       
+                 
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Strinjam se z pogoji uporabe</label>
+                    </div>
+                    
+                  </form>
+                  <button @click="postSkill" type="submit" class="btn btn-primary">Pošlji</button>
+                  <h3>{{message}}</h3>
+                  
+            </div>         
+        </div>
+        
+    </div>
+    <div class="container">
+        <footer style="background-color: #deded5;">
+   
+   <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 255, 0, 0.1);">
+      © 2023 Copyright: <a href="https://si.linkedin.com/in/lajovic" target="_blank">Franci Lajovic</a>, <a href="https://www.fis.unm.si/naprednejsa-racunalniska-znanja/" target="_blank">PRA NOO</a><br><i>Spletni projekt je bil zasnovan na osnovi predloge <a href="https://www.fis.unm.si/pedagoski-in-znanstveni-sodelavci/red-prof-dr-srdan-skrbic/" target="_blank">prof. dr. Srđana Škrbića.</a></i>
+		<br>
+		<center>
+		<small>
+			<br>
+		<b>PROJEKT FINANCIRATA</b><br>
+Projekt sofinancirata Republika Slovenija, Ministrstvo za visoko šolstvo in inovacije , in Evropska unija – NextGenerationEU.
+<br><br>
+Projekt se izvaja skladno z načrtom v okviru razvojnega področja Pametna, trajnostna in vključujoča rast, komponente Krepitev
+kompetenc, zlasti digitalnih in tistih, ki jih zahtevajo novi poklici in zeleni prehod (C3 K5), za
+ukrep investicija F. Izvajanje pilotnih projektov, katerih rezultati bodo podlaga za pripravo
+izhodišč za reformo visokega šolstva za zelen in odporen prehod v Družbo 5.0: projekt Pilotni
+projekti za prenovo visokega šolstva za zelen in odporen prehod.	
+		</small>
+		
+		</center>
+    </div>
+    <!-- !Copyright -->
+  </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+/* Gradient background from light violet to darker violet */
+body {
+  background: linear-gradient(45deg, #f6f3ff, #d8d3ff);
+}
+
+/* Google Fira Sans font */
+body {
+  font-family: "Fira Sans", Arial, sans-serif;
+}
+
+.navbar {
+      background-color: rgba(255,118,0,0.24);
+      width: 100%;
+	  margin-bottom: 20px;
+    }
+
+a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	margin-top:100px;
+}
